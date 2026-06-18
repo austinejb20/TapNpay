@@ -1,5 +1,5 @@
 # TapNpay
-- A responsive transportation payment landing page designed to promote a smart and cashless commuity experience.
+A responsive transportation payment landing page designed to promote a smart and cashless commuity experience.
 - ## Features
 - Responsive landing page design
 - Modern hero section
