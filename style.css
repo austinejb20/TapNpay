@@ -778,8 +778,8 @@ body {
   background: #210F60;
   color: white;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
   font-size: 20px;
 }
 
@@ -793,19 +793,27 @@ body {
   .nav-container {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+
     position: absolute;
     top: 80px;
     left: 0;
     width: 100%;
+
     background: #210F60;
     padding: 20px;
-    gap: 15px;
 
-    transform: translateY(-150%);
-    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+
+    transition: 0.3s ease;
+    z-index: 1000;
   }
 
   .nav-container.show {
+    opacity: 1;
+    visibility: visible;
     transform: translateY(0);
   }
 
