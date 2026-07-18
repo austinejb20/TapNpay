@@ -595,180 +595,77 @@ body {
   color: #ccc;
 }
 
+/* ===================================== */
+/* MOBILE NAVBAR RESPONSIVE 
+/* ===================================== */
 
-/* ===================================== */
-/* MOBILE RESPONSIVE FIX */
-/* ===================================== */
+.menu-btn {
+  display: none;
+  background: #210F60;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
-  
-  * {
-    transform: none !important;
-  }
 
-  body {
-    overflow-x: hidden;
-  }
-
-  /* ===== NAVBAR ===== */
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     height: auto;
   }
 
   .logo {
     padding: 0;
-    text-align: center;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .menu-btn {
+    display: block;
   }
 
   .nav-container {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    position: absolute;
+    top: 80px;
+    left: 0;
+
+    width: 100%;
+    background: #210F60;
+    padding: 25px 0;
+
+    border-radius: 0 0 20px 20px;
+
+    transform: translateY(-120%);
+    transition: 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-container.show {
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    color: #fff;
+    font-size: 16px;
   }
 
   .login-link {
     position: static;
-    margin-top: 15px;
-    right: 0;
-  }
-
-  /* ===== HERO SECTION ===== */
-  .container-card {
-    height: auto;
-    background-size: cover;
-    padding: 60px 20px;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hero-content {
-    position: static;
-    left: 0;
-  }
-
-  .hero-content h1 {
-    font-size: 26px;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  /* ===== HOW IT WORKS ===== */
-  .balance-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .dash {
-    display: none;
-  }
-
-  /* ===== ABOUT SECTION ===== */
-  .about-container {
-    flex-direction: column;
-    padding: 30px 20px;
-  }
-
-  .about-text {
-    text-align: center;
-  }
-
-  .about-text p {
-    width: 100%;
     margin: 0;
-    padding: 0;
-  }
-
-  .about-image img {
-    width: 100%;
-    margin: 20px 0 0 0;
-  }
-
-  /* ===== FEATURES ===== */
-  .layout {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .square-box {
-    width: 100%;
-  }
-
-  .center-image img {
-    width: 180px;
-  }
-
-  /* ===== CTA SECTION ===== */
-  .hero-text-wrapper {
-    margin: 0;
-    padding: 0 20px;
-    font-size: 18px;
-  }
-
-  .info-image lottie-player {
-    position: static;
-    display: block;
-    margin: 20px auto;
-    width: 200px !important;
-    height: 200px !important;
-  }
-
-  .footer-button {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    max-width: 260px;
-  }
-
-  /* ===== FOOTER ===== */
-  .footer {
-    margin-top: 80px;
-    padding: 40px 20px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .footer-center {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .footer-links ul,
-  .footer-links ul li {
-    margin: 0;
-  }
-
-  .footer-contact {
-    margin: 0;
-  }
-
-  .footer-contact h3 {
-    transform: none;
-  }
-
-  .login-wrapper {
-    transform: none;
-    margin: 0;
-    justify-content: center;
-  }
-
-  .image-footer {
-    position: static;
-    margin-top: 20px;
-  }
-
-  .image-footer img {
-    width: 200px;
+    padding: 8px 18px;
   }
 
 }
